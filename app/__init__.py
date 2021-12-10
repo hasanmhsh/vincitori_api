@@ -33,8 +33,12 @@ def create_app(test_config=None):
         return response
 
 
-    @app.route('/shakkelha', methods=['POST'])
-    def shakkel():
+    @app.route("/")
+    def hello():
+        return "Hello World!"
+
+    @app.route('/rates', methods=['POST'])
+    def shipping_rates():
         body = request.get_json()
         # text = body.get('text', 'No text')
         result = "Hello our shipping rates are 7.99 EUR!"
