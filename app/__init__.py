@@ -3,7 +3,6 @@ from flask import Flask, request, abort, jsonify, send_file, send_from_directory
 from flask_cors import CORS
 import random
 from datetime import datetime, timedelta
-import mishkal.tashkeel
 from werkzeug import secure_filename
 
 
