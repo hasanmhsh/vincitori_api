@@ -33,7 +33,7 @@ def create_app(test_config=None):
 
     @app.route("/")
     def hello():
-        return "Hello World!"
+        return "Hello World! this is vicintori api"
 
     @app.route('/rates', methods=['POST'])
     def shipping_rates():
