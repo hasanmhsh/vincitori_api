@@ -39,12 +39,17 @@ def create_app(test_config=None):
     def shipping_rates():
         body = request.get_json()
         # text = body.get('text', 'No text')
-        result = "Hello our shipping rates are 7.99 EUR!"
-        return jsonify(
-            {
-                "result": result
-            }
-        )
+        result = {
+        "rates": [
+            { "service_name": "shipping fees",
+            "service_code": "MH-Has",
+            "total_price": "759",
+            "description": "This is the fastest option by far",
+            "currency": "EUR" }
+        ] 
+    }
+
+        return jsonify(result)
 
 
     
