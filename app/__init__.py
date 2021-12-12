@@ -41,6 +41,9 @@ def create_app(test_config=None):
         # text = body.get('text', 'No text')
         result = "Hello our shipping rates are 7.99 EUR!"
         return jsonify(
+            { "rates": [ { "service_name": "shipping fees", "service_code": "MH", "total_price": "759", "description": "This is the fastest option by far", "currency": "EUR" } ] }
+        )
+        return jsonify(
             {
                 "result": result
             }
